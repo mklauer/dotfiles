@@ -121,18 +121,6 @@ if [ -f ~/.bash_aliases ]; then
   . "$HOME"/.bash_aliases
 fi
 
-#Software specific settings
-# put software specific settings in .sh files into the folder
-# .bashrc.d
-if [ -d ~/.bashrc.d ]; then
-  for i in ~/.bashrc.d/*.{sh,bash}; do
-    if [ -r "$i" ]; then
-      . $i
-    fi
-  done
-  unset i
-fi
-
 set -o vi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
@@ -146,3 +134,15 @@ export WIN_HOME=/mnt/c/Users/"$USER"
 # git-town
 source <(git-town completions bash)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+#Software specific settings
+# put software specific settings in .sh files into the folder
+# .bashrc.d
+if [ -d ~/.bashrc.d ]; then
+  for i in ~/.bashrc.d/*.{sh,bash}; do
+    if [ -r "$i" ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
