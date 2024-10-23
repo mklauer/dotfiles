@@ -130,6 +130,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # WSL
 if [ -d /mnt/c/Users/"$USER" ]; then
   export WIN_HOME=/mnt/c/Users/"$USER"
+  alias codb='cd "$WIN_HOME/OneDrive - SAP SE/"'
+  alias codp='cd $WIN_HOME/OneDrive/'
 else
   export WIN_HOME="$HOME"
 fi
