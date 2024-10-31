@@ -8,12 +8,17 @@ complete -o default -F _pip_completion pip
 # pip bash completion end
 
 ## pipenv
-# create virtual environments in project folder
-export PIPENV_VENV_IN_PROJECT=1
-# enable tab completion
-eval "$(_PIPENV_COMPLETE=bash_source "$HOME"/.local/bin/pipenv)"
+if command -v pipenv &>/dev/null; then
+  # create virtual environments in project folder
+  export PIPENV_VENV_IN_PROJECT=1
+  # enable tab completion
+  eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
+fi
+
 ## pyenv
-#
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if command -v pyenv &>/dev/null; then
+  #
+  export PYENV_ROOT="$HOME/.pyenv"
+  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi

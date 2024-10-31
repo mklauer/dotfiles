@@ -121,12 +121,6 @@ if [ -f ~/.bash_aliases ]; then
   . "$HOME"/.bash_aliases
 fi
 
-set -o vi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # WSL
 if [ -d /mnt/c/Users/"$USER" ]; then
   export WIN_HOME=/mnt/c/Users/"$USER"
@@ -134,14 +128,11 @@ else
   export WIN_HOME="$HOME"
 fi
 
-if [ -n $OneDrive ]; 
-  alias codp='cd $OneDrive'
-fi
-
 ## Completions
 # git-town
-source <(git-town completions bash)
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+if command -v git-town &>/dev/null; then
+  source <(git-town completions bash)
+fi
 
 #Software specific settings
 # put software specific settings in .sh files into the folder
