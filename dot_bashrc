@@ -145,3 +145,4 @@ if [ -d ~/.bashrc.d ]; then
   done
   unset i
 fi
+shopt -s direxpand
