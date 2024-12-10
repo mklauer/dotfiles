@@ -1,6 +1,5 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == "$HOME"/.fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}"$HOME"/.fzf/bin"
-  eval "$(fzf --bash)"
+if command -v fzf >/dev/null 2>&1; then
+  eval "($fzf --bash)"
 fi
