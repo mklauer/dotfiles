@@ -107,10 +107,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Setup WSL GUI Apps on Windows
-export DISPLAY=":0"
-
-export LIBGL_ALWAYS_INDIRECT=1
+# Tab expands the directory name
+shopt -s direxpand
 
 #Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -150,4 +148,3 @@ if [ -d ~/.bashrc.d ]; then
   done
   unset i
 fi
-shopt -s direxpand
