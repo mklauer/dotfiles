@@ -1,3 +1,4 @@
+#!/bin/bash
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -143,8 +144,20 @@ fi
 if [ -d ~/.bashrc.d ]; then
   for i in ~/.bashrc.d/*.{sh,bash}; do
     if [ -r "$i" ]; then
-      . $i
+      start_time=$(date +%s%N)
+      # shellcheck disable=SC1090
+      . "$i"
+      end_time=$(date +%s%N)
+      runtime=$(((end_time - start_time) / 1000000))
+      if [ "$runtime" -gt 100 ]; then
+      echo "Sourced $i in ${runtime}ms"
+      fi
     fi
   done
-  unset i
+  unset i start_time end_time runtime
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+

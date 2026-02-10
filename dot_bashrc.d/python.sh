@@ -1,8 +1,18 @@
+## pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+
+if command -v pyenv &>/dev/null; then
+  eval "$(pyenv init -)"
+  # Load pyenv-virtualenv automatically
+  eval "$(pyenv virtualenv-init -)"
+fi
+
 # pip bash completion start
 _pip_completion() {
-  COMPREPLY=($(COMP_WORDS="${COMP_WORDS[*]}" \
+  mapfile -t COMPREPLY < <(COMP_WORDS="${COMP_WORDS[*]}" \
     COMP_CWORD=$COMP_CWORD \
-    PIP_AUTO_COMPLETE=1 $1 2>/dev/null))
+    PIP_AUTO_COMPLETE=1 $1 2>/dev/null)
 }
 complete -o default -F _pip_completion pip
 # pip bash completion end
@@ -15,10 +25,3 @@ if command -v pipenv &>/dev/null; then
   eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
 fi
 
-## pyenv
-if command -v pyenv &>/dev/null; then
-  #
-  export PYENV_ROOT="$HOME/.pyenv"
-  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
