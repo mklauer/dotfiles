@@ -1,0 +1,4 @@
+{{- if ne .chezmoi.os "windows" }}
+.config/scoop/scoopfile.json
+.bash_profile
+{{- end }}
