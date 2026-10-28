@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.os "windows" -}}
+#!/usr/bin/env bash
+scoop import {{ .chezmoi.sourceDir }}/.config/scoop/scoopfile.json
+{{- end -}}
+

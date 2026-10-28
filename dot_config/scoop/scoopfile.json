@@ -1,0 +1,106 @@
+{
+    "config": {
+        "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+        "scoop_branch": "master"
+    },
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main.git",
+            "Updated": "2026-10-27T17:27:36+01:00",
+            "Manifests": 1702
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2026-10-27T17:30:30+01:00",
+            "Manifests": 2448
+        }
+    ],
+    "apps": [
+        {
+            "Name": "7zip",
+            "Version": "24.08",
+            "Source": "main",
+            "Updated": "2024-09-18T15:06:27.5957544+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "bat",
+            "Version": "0.25.0",
+            "Source": "main",
+            "Updated": "2025-02-12T17:00:27.9985549+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "dos2unix",
+            "Version": "7.5.2",
+            "Source": "main",
+            "Updated": "2025-05-09T12:02:51.9074226+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "eza",
+            "Version": "0.20.8",
+            "Source": "main",
+            "Updated": "2024-11-18T15:48:48.2335704+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "fd",
+            "Version": "10.3.0",
+            "Source": "main",
+            "Updated": "2026-03-06T10:07:54.6444077+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "git-town",
+            "Version": "16.6.0",
+            "Source": "main",
+            "Updated": "2024-11-13T16:44:31.7244655+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "innounp",
+            "Version": "2.71.1",
+            "Source": "main",
+            "Updated": "2026-09-18T13:20:20.4238086+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "jq",
+            "Version": "1.8.1",
+            "Source": "main",
+            "Updated": "2026-04-07T14:50:02.3664926+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "less",
+            "Version": "668",
+            "Source": "main",
+            "Updated": "2025-02-12T17:01:28.9569741+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "tldr",
+            "Version": "0.6.1",
+            "Source": "main",
+            "Updated": "2026-03-12T10:45:52.9837261+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "vifm",
+            "Version": "0.14.5",
+            "Source": "extras",
+            "Updated": "2026-10-27T17:46:31.2213989+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "vim",
+            "Version": "9.1.0",
+            "Source": "main",
+            "Updated": "2024-09-18T15:45:55.8471823+02:00",
+            "Info": ""
+        }
+    ]
+}
