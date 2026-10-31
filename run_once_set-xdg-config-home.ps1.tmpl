@@ -1,0 +1,3 @@
+{{- if eq .chezmoi.os "windows" -}}
+[Environment]::SetEnvironmentVariable("XDG_CONFIG_HOME", "$env:USERPROFILE\.config", "User")
+{{- end -}}

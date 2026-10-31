@@ -1,0 +1,8 @@
+{{- if eq .chezmoi.os "windows" -}}
+#!/usr/bin/env pwsh
+# scoopfile hash: {{ include "dot_config/scoop/scoopfile.json" | sha256sum }}
+if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+}
+scoop import $env:USERPROFILE/.config/scoop/scoopfile.json
+{{- end -}}

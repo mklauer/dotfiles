@@ -2,3 +2,6 @@
 .config/scoop/scoopfile.json
 .bash_profile
 {{- end }}
+{{- if eq .chezmoi.os "windows" }}
+.tmux.conf
+{{- end }}

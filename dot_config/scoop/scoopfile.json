@@ -61,13 +61,6 @@
             "Info": ""
         },
         {
-            "Name": "innounp",
-            "Version": "2.71.1",
-            "Source": "main",
-            "Updated": "2026-09-18T13:20:20.4238086+02:00",
-            "Info": ""
-        },
-        {
             "Name": "jq",
             "Version": "1.8.1",
             "Source": "main",
@@ -79,6 +72,11 @@
             "Version": "668",
             "Source": "main",
             "Updated": "2025-02-12T17:01:28.9569741+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "neovim",
+            "Source": "main",
             "Info": ""
         },
         {
@@ -100,6 +98,36 @@
             "Version": "9.1.0",
             "Source": "main",
             "Updated": "2024-09-18T15:45:55.8471823+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "gcc",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "tree-sitter",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "git",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "nodejs-lts",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "ripgrep",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "lazygit",
+            "Source": "main",
             "Info": ""
         }
     ]
