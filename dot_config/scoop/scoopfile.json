@@ -111,11 +111,6 @@
             "Info": ""
         },
         {
-            "Name": "git",
-            "Source": "main",
-            "Info": ""
-        },
-        {
             "Name": "nodejs-lts",
             "Source": "main",
             "Info": ""
