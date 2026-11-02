@@ -1,3 +1,12 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+if [ -d "/home/d032297/.local/share/bash-completion/completions" ]; then
+  for f in "/home/d032297/.local/share/bash-completion/completions"/*; do
+    [ -f "$f" ] && . "$f"
+  done
+fi
+# OPENSPEC:END
+
 #!/bin/bash
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -161,3 +170,10 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+
+# Load HAI proxy configuration for WSL
+if [[ -f ~/.config/hai/wsl-setup.sh ]]; then
+    source ~/.config/hai/wsl-setup.sh
+fi
+# Add uv to PATH
+export PATH="$HOME/.local/bin:$PATH"
