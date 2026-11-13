@@ -15,6 +15,10 @@
       "Source": "https://github.com/ScoopInstaller/Extras",
       "Updated": "2026-10-27T17:30:30+01:00",
       "Manifests": 2448
+    },
+    {
+      "Name": "psmux",
+      "Source": "https://github.com/psmux/scoop-psmux"
     }
   ],
   "apps": [
@@ -112,6 +116,10 @@
       "Name": "lazygit",
       "Source": "extras",
       "Info": ""
+    },
+    {
+      "Name": "psmux",
+      "Source": "psmux"
     }
   ]
 }
